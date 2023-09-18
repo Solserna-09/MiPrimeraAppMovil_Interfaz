@@ -1,0 +1,36 @@
+<resources>
+
+    //Inicio
+
+    <string name="lbl_Bienvenidos">Bienvenid@</string>
+    <string name="btn_Iniciar_sesión">Iniciar sesión</string>
+    <string name="btn_Registro">Registrarme</string>
+
+    //Login
+    <string name="app_name">MiPrimerApp</string>
+    <string name="mensaje">Hola mundo!!</string>
+    <string name="lbl_usuario">Ingrese su usuario:</string>
+    <string name="lbl_clave">Ingrese su clave:</string>
+    <string name="txt_usuario">usuario</string>
+    <string name="txt_clave">clave</string>
+    <string name="msj_bienvenido">Bienvenido</string>
+    <string name="msj_iniciar">Iniciar sesión</string>
+    <string name="btn_ingresar">Ingresar</string>
+
+
+    // Registro de usuario
+
+    <string name="lbl_nombres">Nombres:</string>
+    <string name="lbl_apellidos">Apellidos:</string>
+    <string name="txt_nombres">Ingrese su nombre</string>
+    <string name="txt_apellidos">Ingrese sus apellidos</string>
+    <string name="lbl_cedula">Cedula:</string>
+    <string name="lbl_Correo">Correo:</string>
+    <string name="lbl_usuario_nuevo">Usuario:</string>
+    <string name="lbl_clave_nuevo">Clave:</string>
+    <string name="txt_usuario_nuevo">Ingrese usuario</string>
+    <string name="btn_registrarme">REGISTRARME</string>
+
+
+
+</resources>
