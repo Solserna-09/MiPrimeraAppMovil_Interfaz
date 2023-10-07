@@ -2,6 +2,7 @@ package com.josesantosdev.miprimerapp;
 
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.josesantosdev.miprimerapp.database.AppDatabase;
 
 public class Login extends AppCompatActivity { //heredando
 
@@ -40,7 +43,29 @@ public class Login extends AppCompatActivity { //heredando
        String usua = usuario.getText().toString();
        String pass = clave.getText().toString();
 
-       if (usua.isEmpty() ||pass.isEmpty()){
+       if(!usua.isEmpty() && !pass.isEmpty()) {
+           AppDatabase database = Room.databaseBuilder(getApplicationContext(),
+                   AppDatabase.class, "first-database").allowMainThreadQueries().build();
+
+           User user = database.userDao().getUserByUserName(usua);
+
+           if(user != null) {
+               String password = user.password;
+               if(password.equals(pass)) {
+                   Toast.makeText(getApplicationContext(), "Bienvenido", Toast.LENGTH_SHORT).show();
+               } else {
+                   Toast.makeText(getApplicationContext(), "usuario o clave incorrectos", Toast.LENGTH_SHORT).show();
+               }
+           } else {
+               Toast.makeText(getApplicationContext(), "usuario o clave incorrectos", Toast.LENGTH_SHORT).show();
+           }
+       } else {
+           Toast.makeText(getApplicationContext(), "El campo usuario y contraseña es obligatorio", Toast.LENGTH_SHORT).show();
+       }
+
+
+
+       /*if (usua.isEmpty() ||pass.isEmpty()){
            Toast.makeText(getApplicationContext(), "usuario o clave vacios", Toast.LENGTH_SHORT).show();
 
        } else if (usua.equals("solv")&& pass.equals("Sol123")){
@@ -49,7 +74,7 @@ public class Login extends AppCompatActivity { //heredando
            startActivity(intent);
        }else {
            Toast.makeText(getApplicationContext(), "usuario o clave incorrectos", Toast.LENGTH_SHORT).show();
-       }
+       }*/
       //  Toast.makeText(getApplicationContext(), "Pulso ingresar", Toast.LENGTH_SHORT).show();
 }
 }
