@@ -5,7 +5,9 @@ import androidx.room.RoomDatabase;
 
 import com.josesantosdev.miprimerapp.User;
 
-@Database(entities = {User.class}, version = 1)
+@Database
+
+        (entities = {User.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract UserDao userDao();
 }

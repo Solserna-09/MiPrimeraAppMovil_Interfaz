@@ -53,6 +53,9 @@ public class Login extends AppCompatActivity { //heredando
                String password = user.password;
                if(password.equals(pass)) {
                    Toast.makeText(getApplicationContext(), "Bienvenido", Toast.LENGTH_SHORT).show();
+                   Intent i = new Intent(Login.this, DashBoardActivity.class);
+                   i.putExtra("userName", user.names);
+                   startActivity(i);
                } else {
                    Toast.makeText(getApplicationContext(), "usuario o clave incorrectos", Toast.LENGTH_SHORT).show();
                }

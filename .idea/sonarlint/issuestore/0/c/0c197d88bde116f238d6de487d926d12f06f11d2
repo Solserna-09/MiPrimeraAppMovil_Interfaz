@@ -1,0 +1,10 @@
+
+h
+java:S1659"FDeclare "apellidos" and all following declarations on a separate line.(¹ÈŒªúÿÿÿÿ8Ò¶Õ—°1
+w
+java:S1450"ZRemove the "registrarme" field and declare it as a local variable in the relevant methods.(…è½í8Ò¶Õ—°1
+X	java:S125%"<This block of commented-out lines of code should be removed.(»ñÒá8×¶Õ—°1
+M
+java:S1172."+Remove this unused method parameter "view".(ŠŒŸ†ùÿÿÿÿ8Ø¶Õ—°1
+L
+java:S1068"/Remove this unused "registrarme" private field.(…è½í8Ý¶Õ—°1

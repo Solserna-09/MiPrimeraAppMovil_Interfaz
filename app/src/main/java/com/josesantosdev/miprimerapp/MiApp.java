@@ -12,7 +12,6 @@ import android.widget.Toast;
 public class MiApp extends AppCompatActivity {
 
 
-    ;
     private Button iniciarSesion, registarme;
 
     @Override

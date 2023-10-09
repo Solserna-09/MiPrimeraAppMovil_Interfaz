@@ -18,10 +18,8 @@ public class User {
     @ColumnInfo(name = "email")
     public String email;
     @ColumnInfo(name = "user_name")
-
     public String userName;
     @ColumnInfo(name = "password")
-
     public String password;
     @ColumnInfo(name = "document_number")
     public String documentNumber;
